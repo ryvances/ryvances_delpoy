@@ -177,15 +177,10 @@
       .menu-item-has-children {
         cursor: pointer;
         transition: .4s ease all;
-
-        &:hover {
-          .sub-menu {
-            display: block;
-          }
-        }
       }
 
       .sub-menu {
+        display: none;
         >div>a {
           display: block;
           color: #fff;

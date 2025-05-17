@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php get_template_part('template-custom/rank_math_the_breadcrumbs'); ?>
+<?php get_template_part('template-customs/rank_math_the_breadcrumbs'); ?>
 
 <main>
   <section class="bg-bg-primary">

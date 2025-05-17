@@ -14,12 +14,11 @@
       <div class="h-full w-full flex justify-between items-center">
         <!-- logo -->
         <a href="/" title="logo Ryvances" class="">
-          <!-- <img src="<?php echo get_template_directory_uri(); ?>/public/" alt="Ryvances" class="h-[45px] md:h-[53px] w-[150px] md:w-[173px]"> -->
-          Logo
+          <img src="<?php echo get_template_directory_uri(); ?>/public/logo.svg" alt="Ryvances" class="h-[45px] md:h-[53px] w-[150px] md:w-[173px]">
         </a>
 
         <!-- menu -->
-        <?php get_template_part('template-custom/wp_nav_menu'); ?>
+        <?php get_template_part('template-customs/wp_nav_menu'); ?>
 
         <!-- contact -->
         <a href="tel:0393950385" class="py-1 lg:py-3 px-4 lg:px-8 ml-0 lg:ml-4 rounded-lg lg:bg-puramu-purple-gradient text-puramu-dark-purple lg:text-tx-primary font-semibold text-lg hidden lg:inline-flex items-center">
@@ -27,7 +26,7 @@
         </a>
 
         <!-- menu mobile -->
-        <div class="relative inline-block">
+        <div class="relative inline-block lg:hidden">
           <button id="menu-mobile-button" class="lg:hidden bg-gradient-to-r from-[#7900ff] to-[#381ee5] text-white w-10 h-10 rounded-full p-1 relative z-[100]">
             <div class="relative w-full h-full">
               <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -41,6 +40,7 @@
           <!-- bg menu mobile -->
           <span id="bg-menu-mobile" class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#7900ff] to-[#381ee5] z-[98] rounded-full transition-all duration-300"></span>
         </div>
+        
       </div>
     </div>
   </header>
@@ -70,7 +70,7 @@
     const menuIcon = document.getElementById('menu-icon');
     const closeIcon = document.getElementById('close-icon');
     const html = document.querySelector('html');
-    console.log(html);
+    
     menuMobileButton.addEventListener('click', function() {
       const bgMenuMobile = document.getElementById('bg-menu-mobile');
 
@@ -92,4 +92,19 @@
         html.style.overflow = 'hidden';
       }
     });
+  </script>
+
+  <script>
+    if (window.innerWidth <= 1024) {
+      const menuItemHasChildren = document.querySelectorAll('.menu-item-has-children');
+      const subMenu = document.querySelectorAll('.sub-menu');
+
+      menuItemHasChildren.forEach(function(item) {
+        item.addEventListener('click', function() {
+          subMenu.forEach(function(sub) {
+            sub.classList.toggle('hidden');
+          });
+        });
+      });
+    }
   </script>
