@@ -630,10 +630,6 @@ video {
 
 /* Thêm các component tùy chỉnh ở đây */
 
-.visible{
-  visibility: visible;
-}
-
 .fixed{
   position: fixed;
 }
@@ -744,8 +740,8 @@ video {
   height: 0.25rem;
 }
 
-.h-10{
-  height: 2.5rem;
+.h-11{
+  height: 2.75rem;
 }
 
 .h-20{
@@ -780,14 +776,6 @@ video {
   height: 100%;
 }
 
-.h-12{
-  height: 3rem;
-}
-
-.h-11{
-  height: 2.75rem;
-}
-
 .min-h-\[1000px\]{
   min-height: 1000px;
 }
@@ -796,8 +784,8 @@ video {
   min-height: 100vh;
 }
 
-.w-10{
-  width: 2.5rem;
+.w-11{
+  width: 2.75rem;
 }
 
 .w-16{
@@ -818,18 +806,6 @@ video {
 
 .w-full{
   width: 100%;
-}
-
-.w-1{
-  width: 0.25rem;
-}
-
-.w-12{
-  width: 3rem;
-}
-
-.w-11{
-  width: 2.75rem;
 }
 
 .max-w-sm{
@@ -1015,17 +991,14 @@ video {
   text-align: center;
 }
 
-.font-sans{
-  font-family: Raleway, sans-serif;
-}
-
-.font-serif{
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-5xl{
@@ -1048,11 +1021,6 @@ video {
   line-height: 1.25rem;
 }
 
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .font-bold{
   font-weight: 700;
 }
@@ -1067,10 +1035,6 @@ video {
 
 .uppercase{
   text-transform: uppercase;
-}
-
-.not-italic{
-  font-style: normal;
 }
 
 .text-\[\#606a70\]{
@@ -1093,13 +1057,13 @@ video {
   color: rgb(31 41 55 / var(--tw-text-opacity, 1));
 }
 
+.text-transparent{
+  color: transparent;
+}
+
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-transparent{
-  color: transparent;
 }
 
 .antialiased{
@@ -1236,10 +1200,6 @@ body{
     gap: 1.25rem;
   }
 
-  .lg\:bg-gradient-to-r{
-    background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  }
-
   .lg\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -1258,10 +1218,5 @@ body{
   .lg\:text-secondary{
     --tw-text-opacity: 1;
     color: rgb(64 75 82 / var(--tw-text-opacity, 1));
-  }
-
-  .lg\:text-tx-primary{
-    --tw-text-opacity: 1;
-    color: rgb(68 68 68 / var(--tw-text-opacity, 1));
   }
 }
