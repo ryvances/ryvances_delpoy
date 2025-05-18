@@ -26,10 +26,10 @@
 
         <!-- menu mobile -->
         <div class="relative inline-block lg:hidden">
-          <button id="menu-mobile-button" class="lg:hidden bg-gradient-to-r from-[#7900ff] to-[#381ee5] text-white w-10 h-10 rounded-full p-1 relative z-[100]">
+          <button id="menu-mobile-button" class="lg:hidden bg-gradient-to-r from-[#7900ff] to-[#381ee5] text-white w-11 h-11 rounded-full p-1 relative z-[100]">
             <div class="relative w-full h-full">
-              <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              <svg id="menu-icon" class="absolute inset-0 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
               </svg>
               <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-transform duration-300 rotate-90 opacity-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -37,7 +37,7 @@
             </div>
           </button>
           <!-- bg menu mobile -->
-          <span id="bg-menu-mobile" class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#7900ff] to-[#381ee5] z-[98] rounded-full transition-all duration-300"></span>
+          <span id="bg-menu-mobile" class="absolute top-0 left-0 w-11 h-11 bg-gradient-to-r from-[#7900ff] to-[#381ee5] z-[98] rounded-full transition-all duration-300"></span>
         </div>
 
       </div>

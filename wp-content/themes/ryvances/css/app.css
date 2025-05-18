@@ -735,6 +735,11 @@ video {
   aspect-ratio: 400/280;
 }
 
+.size-6{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .h-1{
   height: 0.25rem;
 }
@@ -775,6 +780,14 @@ video {
   height: 100%;
 }
 
+.h-12{
+  height: 3rem;
+}
+
+.h-11{
+  height: 2.75rem;
+}
+
 .min-h-\[1000px\]{
   min-height: 1000px;
 }
@@ -805,6 +818,18 @@ video {
 
 .w-full{
   width: 100%;
+}
+
+.w-1{
+  width: 0.25rem;
+}
+
+.w-12{
+  width: 3rem;
+}
+
+.w-11{
+  width: 2.75rem;
 }
 
 .max-w-sm{
