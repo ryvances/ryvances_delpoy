@@ -990,6 +990,14 @@ video {
   text-align: center;
 }
 
+.font-sans{
+  font-family: Raleway, sans-serif;
+}
+
+.font-serif{
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1034,6 +1042,10 @@ video {
 
 .uppercase{
   text-transform: uppercase;
+}
+
+.not-italic{
+  font-style: normal;
 }
 
 .text-\[\#606a70\]{
@@ -1193,6 +1205,10 @@ body{
 
   .lg\:gap-5{
     gap: 1.25rem;
+  }
+
+  .lg\:bg-gradient-to-r{
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
   }
 
   .lg\:px-6{

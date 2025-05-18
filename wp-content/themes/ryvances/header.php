@@ -21,10 +21,8 @@
         <!-- menu -->
         <?php get_template_part('template-customs/wp_nav_menu'); ?>
 
-        <!-- contact -->
-        <a href="tel:0393950385" class="py-1 lg:py-3 px-4 lg:px-8 ml-0 lg:ml-4 rounded-lg lg:bg-puramu-purple-gradient text-puramu-dark-purple lg:text-tx-primary font-semibold text-lg hidden lg:inline-flex items-center">
-          <span class="hidden lg:inline h-6">039 395 0385</span>
-        </a>
+        <!-- button phone number contact -->
+        <?php get_template_part('template-components/button-phone-number-contact'); ?>
 
         <!-- menu mobile -->
         <div class="relative inline-block lg:hidden">
@@ -45,8 +43,9 @@
       </div>
     </section>
   </header>
+
+  <!-- header scroll fixed -->
   <script>
-    // header scroll
     document.addEventListener('scroll', function() {
       const header = document.getElementById('header');
       const siteScroll = window.scrollY;
@@ -64,7 +63,7 @@
     });
   </script>
 
-  <!-- menu mobile -->
+  <!-- menu mobile fixed -->
   <script>
     const menuMobileButton = document.getElementById('menu-mobile-button');
     const menuMobile = document.getElementById('id-nav-container');
@@ -94,7 +93,7 @@
       }
     });
 
-    // Fix for responsive change
+    // fix for responsive change
     window.addEventListener('resize', function() {
       if (window.innerWidth > 1024) {
         menuMobile.classList.remove('menu-mobile-active');
@@ -109,6 +108,7 @@
     });
   </script>
 
+  <!-- menu item has children mobile -->
   <script>
     if (window.innerWidth <= 1024) {
       const menuItemHasChildren = document.querySelectorAll('.menu-item-has-children');
