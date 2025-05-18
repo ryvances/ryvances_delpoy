@@ -14,7 +14,8 @@
       <div class="h-full w-full flex justify-between items-center">
         <!-- logo -->
         <a href="/" title="logo Ryvances" class="">
-          <img src="<?php echo get_template_directory_uri(); ?>/public/logo.svg" alt="Ryvances" class="h-[45px] md:h-[53px] w-[150px] md:w-[173px]">
+          <!-- <img src="<?php echo get_template_directory_uri(); ?>/public/logo.svg" alt="Ryvances" class="h-[45px] md:h-[53px] w-[150px] md:w-[173px]"> -->
+          <span class="text-3xl font-bold bg-gradient-to-r from-[#7900ff] to-[#381ee5] bg-clip-text text-transparent">Raichii</span>
         </a>
 
         <!-- menu -->
@@ -114,30 +115,30 @@
 
       menuItemHasChildren.forEach(function(item) {
         const link = item.querySelector('a');
-        
+
         link.addEventListener('click', function(e) {
           const rect = link.getBoundingClientRect();
           const isClickOnArrow = (e.clientX > rect.right - 50);
-          
+
           if (isClickOnArrow) {
             e.preventDefault();
-            
+
             item.classList.toggle('active');
-            
+
             const subMenu = item.querySelector('.sub-menu');
             if (subMenu) {
               subMenu.classList.toggle('active');
-              
+
               if (subMenu.classList.contains('active')) {
                 subMenu.style.transition = 'none';
                 subMenu.style.maxHeight = 'none';
-                
+
                 const height = subMenu.scrollHeight;
-                
+
                 subMenu.style.maxHeight = '0';
-                
+
                 subMenu.offsetHeight;
-                
+
                 subMenu.style.transition = '.4s ease-in-out all';
                 subMenu.style.maxHeight = height + 'px';
               } else {
