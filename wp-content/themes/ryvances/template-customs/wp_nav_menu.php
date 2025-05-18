@@ -151,6 +151,10 @@
       z-index: 99;
       inset: 0;
       padding: 10px 16px;
+      
+      &.menu-mobile-active {
+        display: block;
+      }
 
       #menu-primary-menu {
         height: 100%;

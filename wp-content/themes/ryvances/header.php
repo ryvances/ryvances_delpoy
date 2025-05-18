@@ -74,8 +74,8 @@
     menuMobileButton.addEventListener('click', function() {
       const bgMenuMobile = document.getElementById('bg-menu-mobile');
 
-      if (menuMobile.style.display === 'block') {
-        menuMobile.style.display = 'none';
+      if (menuMobile.classList.contains('menu-mobile-active')) {
+        menuMobile.classList.remove('menu-mobile-active');
         bgMenuMobile.style.transform = 'scale(1)';
         menuIcon.classList.remove('-rotate-90', 'opacity-0');
         menuIcon.classList.add('rotate-0', 'opacity-100');
@@ -83,13 +83,27 @@
         closeIcon.classList.add('rotate-90', 'opacity-0');
         html.style.overflow = 'auto';
       } else {
-        menuMobile.style.display = 'block';
+        menuMobile.classList.add('menu-mobile-active');
         bgMenuMobile.style.transform = 'scale(100)';
         menuIcon.classList.remove('rotate-0', 'opacity-100');
         menuIcon.classList.add('-rotate-90', 'opacity-0');
         closeIcon.classList.remove('rotate-90', 'opacity-0');
         closeIcon.classList.add('-rotate-90', 'opacity-100');
         html.style.overflow = 'hidden';
+      }
+    });
+
+    // Fix for responsive change
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 1024) {
+        menuMobile.classList.remove('menu-mobile-active');
+        const bgMenuMobile = document.getElementById('bg-menu-mobile');
+        bgMenuMobile.style.transform = 'scale(1)';
+        menuIcon.classList.remove('-rotate-90', 'opacity-0');
+        menuIcon.classList.add('rotate-0', 'opacity-100');
+        closeIcon.classList.remove('-rotate-90', 'opacity-100');
+        closeIcon.classList.add('rotate-90', 'opacity-0');
+        html.style.overflow = 'auto';
       }
     });
   </script>
