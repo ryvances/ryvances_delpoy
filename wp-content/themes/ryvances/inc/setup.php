@@ -1,4 +1,7 @@
 <?php
+// Chức Năng: Thiết lập các tính năng cơ bản của theme như hỗ trợ thumbnails, menus, và text domains.
+// Ví Dụ: Hỗ trợ featured images, đăng ký menu, và thêm theme support cho title-tag.
+
 // ---------- Custom SCF variables global ----------
 if (function_exists('acf_add_options_page')) {
 	acf_add_options_page([

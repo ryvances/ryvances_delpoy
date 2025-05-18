@@ -1,4 +1,7 @@
 <?php
+// Chức Năng: Chứa các hàm trợ giúp (helper functions) được sử dụng lặp lại trong theme.
+// Ví Dụ: Hàm rút ngắn chuỗi, định dạng ngày, hoặc tạo breadcrumbs.
+
 // ---------- log value ----------
 if (!function_exists('log_')) {
   function log_($value)
