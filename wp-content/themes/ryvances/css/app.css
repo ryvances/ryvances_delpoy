@@ -630,6 +630,10 @@ video {
 
 /* Thêm các component tùy chỉnh ở đây */
 
+.visible{
+  visibility: visible;
+}
+
 .fixed{
   position: fixed;
 }

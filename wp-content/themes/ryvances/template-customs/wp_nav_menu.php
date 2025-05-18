@@ -161,13 +161,41 @@
         gap: 8px;
 
         >div {
+          width: 100%;
+
           >a {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             padding: 8px 0;
             font-size: 18px;
             font-weight: 600;
             color: #fff;
             text-decoration: none;
+          }
+        }
+
+        >div.menu-item-has-children {
+          >a {
+            position: relative;
+
+            &::after {
+              content: '';
+              display: inline-block;
+              width: 24px;
+              height: 24px;
+              background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+              background-size: contain;
+              background-repeat: no-repeat;
+              transition: transform 0.3s ease;
+              margin-left: 40px;
+            }
+          }
+
+          &.active {
+            >a::after {
+              transform: rotate(180deg);
+            }
           }
         }
       }
@@ -176,18 +204,25 @@
       /* ---------- Menu 2 ---------- */
       .menu-item-has-children {
         cursor: pointer;
-        transition: .4s ease all;
       }
 
       .sub-menu {
-        display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: .4s ease-in-out all;
+
+        &.active {
+          max-height: 100%;
+        }
+
         >div>a {
           display: block;
           color: #fff;
           padding: 8px 16px;
           text-decoration: none;
-          font-size: 14px;
+          font-size: 18px;
           border: none;
+          width: fit-content;
         }
       }
     }

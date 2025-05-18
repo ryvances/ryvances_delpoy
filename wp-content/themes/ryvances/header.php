@@ -10,7 +10,7 @@
 
 <body>
   <header id="header" class="fixed top-0 left-0 right-0 z-50 h-24 transition-all duration-200">
-    <div class="container px-4 mx-auto h-full flex justify-between items-center">
+    <section class="container px-4 mx-auto h-full flex justify-between items-center">
       <div class="h-full w-full flex justify-between items-center">
         <!-- logo -->
         <a href="/" title="logo Ryvances" class="">
@@ -40,9 +40,9 @@
           <!-- bg menu mobile -->
           <span id="bg-menu-mobile" class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#7900ff] to-[#381ee5] z-[98] rounded-full transition-all duration-300"></span>
         </div>
-        
+
       </div>
-    </div>
+    </section>
   </header>
   <script>
     // header scroll
@@ -70,7 +70,7 @@
     const menuIcon = document.getElementById('menu-icon');
     const closeIcon = document.getElementById('close-icon');
     const html = document.querySelector('html');
-    
+
     menuMobileButton.addEventListener('click', function() {
       const bgMenuMobile = document.getElementById('bg-menu-mobile');
 
@@ -81,7 +81,7 @@
         menuIcon.classList.add('rotate-0', 'opacity-100');
         closeIcon.classList.remove('-rotate-90', 'opacity-100');
         closeIcon.classList.add('rotate-90', 'opacity-0');
-        html.style.overflow = 'auto';
+        // html.style.overflow = 'auto';
       } else {
         menuMobile.style.display = 'block';
         bgMenuMobile.style.transform = 'scale(100)';
@@ -89,7 +89,7 @@
         menuIcon.classList.add('-rotate-90', 'opacity-0');
         closeIcon.classList.remove('rotate-90', 'opacity-0');
         closeIcon.classList.add('-rotate-90', 'opacity-100');
-        html.style.overflow = 'hidden';
+        // html.style.overflow = 'hidden';
       }
     });
   </script>
@@ -97,13 +97,40 @@
   <script>
     if (window.innerWidth <= 1024) {
       const menuItemHasChildren = document.querySelectorAll('.menu-item-has-children');
-      const subMenu = document.querySelectorAll('.sub-menu');
 
       menuItemHasChildren.forEach(function(item) {
-        item.addEventListener('click', function() {
-          subMenu.forEach(function(sub) {
-            sub.classList.toggle('hidden');
-          });
+        const link = item.querySelector('a');
+        
+        link.addEventListener('click', function(e) {
+          const rect = link.getBoundingClientRect();
+          const isClickOnArrow = (e.clientX > rect.right - 50);
+          
+          if (isClickOnArrow) {
+            e.preventDefault();
+            
+            item.classList.toggle('active');
+            
+            const subMenu = item.querySelector('.sub-menu');
+            if (subMenu) {
+              subMenu.classList.toggle('active');
+              
+              if (subMenu.classList.contains('active')) {
+                subMenu.style.transition = 'none';
+                subMenu.style.maxHeight = 'none';
+                
+                const height = subMenu.scrollHeight;
+                
+                subMenu.style.maxHeight = '0';
+                
+                subMenu.offsetHeight;
+                
+                subMenu.style.transition = '.4s ease-in-out all';
+                subMenu.style.maxHeight = height + 'px';
+              } else {
+                subMenu.style.maxHeight = '0';
+              }
+            }
+          }
         });
       });
     }
