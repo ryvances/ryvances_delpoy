@@ -81,7 +81,7 @@
         menuIcon.classList.add('rotate-0', 'opacity-100');
         closeIcon.classList.remove('-rotate-90', 'opacity-100');
         closeIcon.classList.add('rotate-90', 'opacity-0');
-        // html.style.overflow = 'auto';
+        html.style.overflow = 'auto';
       } else {
         menuMobile.style.display = 'block';
         bgMenuMobile.style.transform = 'scale(100)';
@@ -89,7 +89,7 @@
         menuIcon.classList.add('-rotate-90', 'opacity-0');
         closeIcon.classList.remove('rotate-90', 'opacity-0');
         closeIcon.classList.add('-rotate-90', 'opacity-100');
-        // html.style.overflow = 'hidden';
+        html.style.overflow = 'hidden';
       }
     });
   </script>
