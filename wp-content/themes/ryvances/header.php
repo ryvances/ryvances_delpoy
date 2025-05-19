@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="touch-action-none">
 
 <head>
   <meta charset="UTF-8" />

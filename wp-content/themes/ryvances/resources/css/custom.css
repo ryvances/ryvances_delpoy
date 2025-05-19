@@ -7,3 +7,7 @@
 @layer utilities {
   /* Thêm các utility tùy chỉnh ở đây */
 }
+
+html {
+  touch-action: manipulation !important;
+}
