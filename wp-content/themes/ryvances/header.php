@@ -14,8 +14,10 @@
       <div class="h-full w-full flex justify-between items-center">
         <!-- logo -->
         <a href="/" title="logo Ryvances" class="">
-          <!-- <img src="<?php echo get_template_directory_uri(); ?>/public/logo.svg" alt="Ryvances" class="h-[45px] md:h-[53px] w-[150px] md:w-[173px]"> -->
-          <span class="text-3xl font-bold bg-gradient-to-r from-[#7900ff] to-[#381ee5] bg-clip-text text-transparent">Raichii</span>
+          <!-- <span class="text-3xl font-bold bg-gradient-to-r from-[#7900ff] to-[#381ee5] bg-clip-text text-transparent">Dobi</span>
+          <span class="hidden lg:inline-block text-3xl font-bold text-gray-600">Design</span>
+          <span class="inline-block lg:hidden text-3xl font-bold text-gray-600">Des</span> -->
+          <img src="<?php echo get_template_directory_uri(); ?>/public/logo.png" alt="logo Ryvances" class="w-10 h-10">
         </a>
 
         <!-- menu -->
