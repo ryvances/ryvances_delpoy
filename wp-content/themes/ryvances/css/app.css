@@ -560,6 +560,10 @@ video {
 
 @tailwind utilities;
 
+* {
+  touch-action: manipulation;
+}
+
 .container{
   width: 100%;
 }
