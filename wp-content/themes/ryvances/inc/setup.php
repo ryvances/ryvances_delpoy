@@ -39,20 +39,18 @@ function enable_woocommerce()
 }
 add_action('after_setup_theme', 'enable_woocommerce');
 
+// ---------- Custom Walker Nav Menu ----------
 class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
-	// Start Level: replaces <ul class="sub-menu">
 	function start_lvl( &$output, $depth = 0, $args = array() ) {
 			$indent = str_repeat("\t", $depth);
 			$output .= "\n$indent<div class=\"sub-menu\">\n";
 	}
 
-	// End Level: closes the submenu <div>
 	function end_lvl( &$output, $depth = 0, $args = array() ) {
 			$indent = str_repeat("\t", $depth);
 			$output .= "$indent</div>\n";
 	}
 
-	// Start Element: replaces <li>
 	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 			$indent = ($depth) ? str_repeat("\t", $depth) : '';
 			$classes = empty($item->classes) ? array() : (array) $item->classes;
@@ -89,7 +87,6 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 			$output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
 	}
 
-	// End Element: closes the submenu item <div>
 	function end_el( &$output, $item, $depth = 0, $args = array() ) {
 			$output .= "</div>\n";
 	}

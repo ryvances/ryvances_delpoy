@@ -8,7 +8,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
   <header id="header" class="fixed top-0 left-0 right-0 z-50 h-24 transition-all duration-200">
     <section class="container px-4 mx-auto h-full flex justify-between items-center">
       <div class="h-full w-full flex justify-between items-center">
