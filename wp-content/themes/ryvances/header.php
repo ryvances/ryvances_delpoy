@@ -41,7 +41,7 @@
           <!-- bg menu mobile -->
           <span id="bg-menu-mobile" class="absolute top-0 left-0 w-11 h-11 bg-gradient-to-r from-[#7900ff] to-[#381ee5] z-[98] rounded-full transition-all duration-300"></span>
         </div>
-
+        <?php echo do_shortcode('[gtranslate]'); ?>
       </div>
     </section>
   </header>
@@ -124,7 +124,7 @@
 
           if (isClickOnArrow) {
             e.preventDefault();
-            
+
             if (currentOpenItem && currentOpenItem !== item) {
               currentOpenItem.classList.remove('active');
               const prevSubMenu = currentOpenItem.querySelector('.sub-menu');
@@ -142,7 +142,7 @@
 
               if (subMenu.classList.contains('active')) {
                 currentOpenItem = item;
-                
+
                 subMenu.style.transition = 'none';
                 subMenu.style.maxHeight = 'none';
 
