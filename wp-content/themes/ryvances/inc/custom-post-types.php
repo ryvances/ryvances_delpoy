@@ -78,8 +78,8 @@ function ryvances_register_taxonomies() {
     
     // Mẫu Website Categories (hierarchical)
     $mau_website_labels = array(
-        'name'                       => _x('Dobi Mẫu Website', 'taxonomy general name', 'ryvances'),
-        'singular_name'              => _x('Dobi Mẫu Website', 'taxonomy singular name', 'ryvances'),
+        'name'                       => _x('Mẫu Website', 'taxonomy general name', 'ryvances'),
+        'singular_name'              => _x('Mẫu Website', 'taxonomy singular name', 'ryvances'),
         'search_items'               => __('Search Mẫu Website', 'ryvances'),
         'all_items'                  => __('All Mẫu Website', 'ryvances'),
         'parent_item'                => __('Mẫu Website cha', 'ryvances'),
@@ -107,7 +107,7 @@ function ryvances_register_taxonomies() {
 
     // Mẫu Website Tags (non-hierarchical)
     $mau_website_tag_labels = array(
-        'name'                       => _x('Dobi Mẫu Website Tags', 'taxonomy general name', 'ryvances'),
+        'name'                       => _x('Mẫu Website Tags', 'taxonomy general name', 'ryvances'),
         'singular_name'              => _x('Mẫu Website Tag', 'taxonomy singular name', 'ryvances'),
         'search_items'               => __('Search Mẫu Website Tags', 'ryvances'),
         'all_items'                  => __('All Mẫu Website Tags', 'ryvances'),
