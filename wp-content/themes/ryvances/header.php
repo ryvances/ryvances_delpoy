@@ -22,10 +22,10 @@
 
         <!-- menu -->
         <?php get_template_part('template-customs/wp_nav_menu'); ?>
-
+        
         <!-- button phone number contact -->
+        <!-- <?php echo do_shortcode('[gtranslate]'); ?> -->
         <?php get_template_part('template-components/button-phone-number-contact'); ?>
-
         <!-- menu mobile -->
         <div class="relative inline-block lg:hidden">
           <button id="menu-mobile-button" class="lg:hidden bg-gradient-to-r from-[#7900ff] to-[#381ee5] text-white w-11 h-11 rounded-full p-1 relative z-[100]">
@@ -41,7 +41,6 @@
           <!-- bg menu mobile -->
           <span id="bg-menu-mobile" class="absolute top-0 left-0 w-11 h-11 bg-gradient-to-r from-[#7900ff] to-[#381ee5] z-[98] rounded-full transition-all duration-300"></span>
         </div>
-        <?php echo do_shortcode('[gtranslate]'); ?>
       </div>
     </section>
   </header>
