@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: My Account
+ * Template Name: Cart
  *
  * @author ryan
  */
