@@ -561,7 +561,7 @@ video {
 @tailwind utilities;
 
 * {
-  touch-action: manipulation;
+  /* touch-action: manipulation; */
 }
 
 .container{
@@ -725,6 +725,10 @@ video {
 
 .flex{
   display: flex;
+}
+
+.table{
+  display: table;
 }
 
 .hidden{
