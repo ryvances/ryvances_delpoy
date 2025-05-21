@@ -1,0 +1,13 @@
+/* CSS cho trang admin của plugin Hello 1 */
+.wrap h1 {
+  color: #23282d;
+  margin-bottom: 20px;
+}
+
+.form-table th {
+  width: 150px;
+}
+
+.form-table textarea {
+  width: 100%;
+}

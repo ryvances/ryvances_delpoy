@@ -31,7 +31,7 @@
             padding: 8px 0;
             font-size: 18px;
             font-weight: 600;
-            color: #444444;
+            color: #333333;
             text-decoration: none;
             transition: .4s ease all;
             position: relative;
@@ -66,7 +66,7 @@
             padding: 8px 0;
             font-size: 18px;
             font-weight: 600;
-            color: #444444;
+            color: #333333;
             text-decoration: none;
             position: relative;
 
@@ -127,7 +127,7 @@
             transform: translateX(4px);
 
             >a {
-              color: #444444;
+              color: #333333;
             }
           }
         }

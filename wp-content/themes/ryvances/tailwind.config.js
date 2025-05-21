@@ -13,10 +13,21 @@ module.exports = {
         '2xl': '1450px',
       },
       colors: {
-        primary: '#b30537',
-        secondary: '#404b52',
-        'tx-primary': '#444444',
-        'bg-primary': '#DAF2EE',
+        primary: '#E0FFFF',
+        secondary: '#2D92B3',
+        // secondary: '#4663AC',
+
+        'tx-primary': '#333333',
+        'tx-secondary': '#666666',
+
+        'btn-primary': '#E6BBAD',
+        'btn-secondary': '#FFD166',
+
+        'footer-primary': '#6F00FF',
+        'footer-secondary': '#E1EBEE',
+        'footer-text': '#E0E0E0',
+
+        
       },
       fontFamily: {
         sans: ['Raleway', 'sans-serif'],

@@ -10,4 +10,6 @@ require_once get_template_directory() . '/inc/common/func-standard.php';
 
 // WooCommerce
 require_once get_template_directory() . '/woocommerce/inc/sidebar.php';
+require_once get_template_directory() . '/woocommerce/inc/shop.php';
+require_once get_template_directory() . '/woocommerce/inc/checkout.php';
 ?>
