@@ -13,8 +13,22 @@ get_header();
 <main>
   <section class="bg-primary">
     <div class="container px-4 mx-auto h-full">
-      <div class="flex justify-center items-center w-full h-full min-h-[1000px]">
+      <div class="flex justify-center items-center w-full h-full min-h-[500px]">
         <p class="text-black">Standard</p>
+      </div>
+    </div>
+  </section>
+  <section class="">
+    <div class="container px-4 mx-auto h-full">
+      <div class="flex justify-center items-center w-full h-full min-h-[500px]">
+        <p class="text-black">Standard 2</p>
+      </div>
+    </div>
+  </section>
+  <section class="bg-primary">
+    <div class="container px-4 mx-auto h-full">
+      <div class="flex justify-center items-center w-full h-full min-h-[500px]">
+        <p class="text-black">Standard 3</p>
       </div>
     </div>
   </section>

@@ -20,8 +20,8 @@ module.exports = {
         'tx-primary': '#333333',
         'tx-secondary': '#666666',
 
-        'btn-primary': '#E6BBAD',
-        'btn-secondary': '#FFD166',
+        'btn-primary': '#5227FF',
+        'btn-secondary': '#6D1EA9',
 
         'footer-primary': '#6F00FF',
         'footer-secondary': '#E1EBEE',
