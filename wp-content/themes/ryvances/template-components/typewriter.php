@@ -1,22 +1,22 @@
 <!-- Typewriter: hiệu ứng viết chữ -->
-  <div class="typewriter">
-    <span class="typewriter-text" id="typewriter-text"></span>
-    <span class="cursor">|</span>
-  </div>
+<div class="typewriter">
+  <span class="typewriter-text" id="typewriter-text"></span>
+  <span class="cursor">|</span>
+</div>
 
 <style>
   .typewriter {
     display: flex;
     align-items: center;
     position: relative;
-    max-height: 42px; 
+    max-height: 42px;
   }
 
   .typewriter-text {
     display: inline-block;
     min-height: 42px;
-    max-height: 42px; 
-    overflow: hidden; 
+    max-height: 42px;
+    overflow: hidden;
   }
 
   .cursor {
@@ -29,6 +29,7 @@
   }
 
   @keyframes blink {
+
     0%,
     50% {
       opacity: 1;
@@ -84,22 +85,22 @@
       } else if (this.isDeleting && this.currentText === '') {
         this.isDeleting = false;
         this.currentSentenceIndex = (this.currentSentenceIndex + 1) % this.sentences.length;
-        timeout = 500; 
+        timeout = 500;
       }
 
       setTimeout(() => this.type(), timeout);
     }
   }
-  
+
   document.addEventListener('DOMContentLoaded', function() {
     const typewriterElement = document.getElementById('typewriter-text');
 
     const sentences = [
-      'của bạn với công nghệ hiện đại 1',
-      'của bạn với giải pháp toàn diện 2',
-      'của bạn với đội ngũ chuyên nghiệp 3',
-      'của bạn với chiến lược đột phá 4',
-      'của bạn với sự đổi mới sáng tạo 5'
+      'của bạn với Website Chuyên Nghiệp.',
+      'của bạn với Giao Diện Hiện Đại.',
+      'của bạn với Tối Ưu Chuyển Đổi.',
+      'của bạn với Chuẩn SEO Vượt Trội.',
+      'của bạn với Thương Hiệu Dẫn Đầu.'
     ];
 
     new TypewriterEffect(typewriterElement, {
