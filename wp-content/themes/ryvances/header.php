@@ -15,7 +15,7 @@
         <!-- logo -->
         <a href="/" title="logo Ryvances" class="">
           <span class="text-3xl font-bold bg-gradient-to-r from-[#7900ff] to-[#381ee5] bg-clip-text text-transparent">HOZI</span>
-          <span class="text-3xl font-bold text-gray-600">Web</span>
+          <span class="text-3xl font-bold text-gray-600">Design</span>
           <!-- <img src="<?php echo get_template_directory_uri(); ?>/public/logo.png" alt="logo Ryvances" class="w-10 h-10"> -->
         </a>
 

@@ -15,7 +15,9 @@ get_header();
     <div class="relative z-20 container px-4 mx-auto">
       <div class="pt-44 flex flex-col items-center justify-center h-full gap-y-8">
         <h1 class="text-tx-primary font-bold text-4xl uppercase tracking-widest">THIẾT KẾ WEBSITE WORDPRESS</h1>
-        <h2 class="text-tx-primary font-semibold text-[28px]">Phát triển doanh nghiệp của bạn với....</h2>
+        <h2 class="text-tx-primary font-semibold text-[28px] flex items-center gap-x-2">
+          <span class="text-btn-primary">Phát triển doanh nghiệp </span><?php get_template_part('template-components/typewriter'); ?>
+        </h2>
         <h3 class="text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-[#F53CE6] to-[#7220CF] text-7xl leading-tight">HOZIDesign VIỆT NAM</h3>
         <p class="text-tx-primary text-xl text-center">Mang đến những thiết kế <b>độc đáo</b> & <b>chuyên nghiệp</b> giúp doanh nghiệp của bạn <b>nổi bật</b> trong thế giới số.</p>
         <div class="flex justify-center items-center w-full gap-x-10 mt-10">
@@ -100,6 +102,13 @@ get_header();
     <svg class="w-full fill-white absolute z-20 bottom-0" viewBox="0 0 1920 222" xmlns="http://www.w3.org/2000/svg">
       <path d="m1920.5 91.325c-878.73-165.59-1537.7-68.638-1920.5 1e-4v130.67h1920.5v-130.67z" fill="#fff"></path>
     </svg>
+    <!-- circle -->
+    <div class="absolute inset-0 flex justify-center items-center">
+      <div class="relative w-full h-full">
+        <div class="absolute -top-20 -left-20 rounded-full bg-gradient-to-r from-[#7900ff] to-[#381ee5] opacity-10 w-80 h-80"></div>
+        <div class="absolute top-56 left-96 rounded-full bg-gradient-to-r from-[#7900ff] to-[#381ee5] opacity-10 w-20 h-20"></div>
+      </div>
+    </div>
   </section>
   <section class="">
     <div class="container px-4 mx-auto h-full">

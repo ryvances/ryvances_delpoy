@@ -12,6 +12,10 @@
       </div>
     </div>
   </section>
+
+  <!-- scroll to top -->
+  <?php get_template_part('template-components/scroll_to_top'); ?>
+
 </footer>
 
 <?php wp_footer(); ?>
