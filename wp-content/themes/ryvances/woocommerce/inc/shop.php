@@ -14,10 +14,10 @@ function custom_woocommerce_wrapper_start() {
         <main id="main" class="site-main woocommerce container px-4 mx-auto pt-24" role="main">
             <?php if (is_woocommerce() && is_archive() && is_tax()): ?>
                 <div class="grid grid-cols-12 gap-4">
-                    <div class="col-span-12 md:col-span-3">
+                    <div class="col-span-12 lg:col-span-3">
                         <?php do_action('woocommerce_sidebar_custom'); ?>
                     </div>
-                    <div class="col-span-12 md:col-span-9">
+                    <div class="col-span-12 lg:col-span-9">
             <?php endif; ?>
     <?php
 echo ob_get_clean();
