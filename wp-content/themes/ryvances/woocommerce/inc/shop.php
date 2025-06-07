@@ -1,9 +1,16 @@
 <?php
-// ---------- remove wrapper ----------
+// remove wrapper
 remove_action('woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
 remove_action('woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+// remove breadcrumbs
+remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+// remove result count
+remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+// remove woocommerce_catalog_ordering
+remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
 
-// ---------- add wrapper ----------
+// ---------- add action ----------
+// add wrapper
 add_action('woocommerce_before_main_content', 'hozi_woocommerce_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'hozi_woocommerce_wrapper_end', 10);
 
@@ -32,23 +39,17 @@ echo ob_get_clean();
 function hozi_woocommerce_wrapper_end() {
     ob_start();
     ?>
-            <?php if (is_woocommerce() && is_archive() && is_tax()): ?>
-                </div>
+        <?php if (is_woocommerce() && is_archive() && is_tax()): ?>
             </div>
-            <?php endif; ?>
+        </div>
+        <?php endif; ?>
         </main>
     </div>
     <?php
 echo ob_get_clean();
 }
 
-// remove breadcrumbs
-remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
-// remove result count
-remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
-
-
-// add title
+// add custom title
 remove_action('woocommerce_shop_loop_header', 'woocommerce_product_taxonomy_archive_header', 10);
 add_action('woocommerce_shop_loop_header', 'hozi_woocommerce_product_taxonomy_archive_header', 10);
 function hozi_woocommerce_product_taxonomy_archive_header() {
@@ -63,10 +64,7 @@ function hozi_woocommerce_product_taxonomy_archive_header() {
     echo ob_get_clean();
 }    
 
-// remove woocommerce_catalog_ordering
-remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
-
-// sale flash
+// add custom sale flash
 remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10);
 add_action('woocommerce_before_shop_loop_item_title', 'hozi_woocommerce_show_product_loop_sale_flash', 10);
 function hozi_woocommerce_show_product_loop_sale_flash() {
@@ -97,7 +95,30 @@ function hozi_woocommerce_show_product_loop_sale_flash() {
     echo ob_get_clean();
 }
 
+// add custom pagination
+remove_action('woocommerce_after_shop_loop', 'woocommerce_pagination', 10);
+add_action('woocommerce_after_main_content', 'hozi_woocommerce_pagination', 9);
+function hozi_woocommerce_pagination() {
+    ob_start();
+    ?>
+    <div class="col-span-12 mt-10">
+        <?php woocommerce_pagination(); ?>
+    </div>
+    <?php
+    echo ob_get_clean();
+}   
+?>
+<?php
 // ---------- content product ----------
+// remove content product
+remove_action('woocommerce_shop_loop', 'woocommerce_template_loop_product_link_open', 10);
+// remove link
+remove_action('woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10);
+// remove price
+remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10);
+// remove add to cart
+remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
+
 // add custom product loop start
 add_filter('woocommerce_product_loop_start', function($html) {
     $html = str_replace(
@@ -108,9 +129,7 @@ add_filter('woocommerce_product_loop_start', function($html) {
     return $html;
 });
 
-// remove content product
-remove_action('woocommerce_shop_loop', 'woocommerce_template_loop_product_link_open', 10);
-
+// add custom product loop start
 add_action('woocommerce_before_shop_loop_item', 'hozi_woocommerce_template_wrapper_product', 10);
 function hozi_woocommerce_template_wrapper_product() {
     ob_start();
@@ -119,6 +138,8 @@ function hozi_woocommerce_template_wrapper_product() {
     <?php
     echo ob_get_clean();
 }
+
+// add custom product loop end
 add_action('woocommerce_after_shop_loop_item', 'hozi_woocommerce_template_wrapper_product_end', 10);
 function hozi_woocommerce_template_wrapper_product_end() {
     ob_start();
@@ -128,10 +149,7 @@ function hozi_woocommerce_template_wrapper_product_end() {
     echo ob_get_clean();
 }
 
-// remove link
-remove_action('woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10);
-
-// image
+// add custom product image
 remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
 add_action('woocommerce_before_shop_loop_item_title', 'hozi_woocommerce_template_loop_product_thumbnail', 10);
 function hozi_woocommerce_template_loop_product_thumbnail() {
@@ -143,31 +161,30 @@ function hozi_woocommerce_template_loop_product_thumbnail() {
             alt="<?php echo esc_attr(get_the_title()); ?>"
             class="w-full h-full !mb-0 object-cover transform translate-y-0 group-hover:-translate-y-[calc(100%-300px)] md:group-hover:-translate-y-[calc(100%-400px)] lg:group-hover:-translate-y-[calc(100%-300px)] transition-transform duration-[2000ms] linear"
         >
-        <div class="group-hover:bg-black/30 group-hover:opacity-100 opacity-0 absolute top-0 left-0 w-full h-full flex justify-center items-center transition-all duration-300">
-            <a href="<?php echo esc_url(get_the_permalink()); ?>" class="btn-posnawr flex items-center gap-1 text-white text-sm font-bold">
+        <a href="<?php echo esc_url(get_the_permalink()); ?>" class="group-hover:bg-black/30 group-hover:opacity-100 opacity-0 absolute top-0 left-0 w-full h-full flex justify-center items-center transition-all duration-300">
+            <div class="btn-posnawr flex items-center gap-1 text-white text-sm font-bold">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                 </svg>
                 <span><?php echo esc_html('Xem chi tiết'); ?></span>
-            </a>
-        </div>
+            </div>
+        </a>
     </div>
     <?php
     echo ob_get_clean();
 }
 
-
-// title
+// add custom product title
 remove_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10);
 add_action('woocommerce_shop_loop_item_title', 'hozi_woocommerce_template_loop_product_title', 10);
 function hozi_woocommerce_template_loop_product_title() {
     ob_start();
     ?>
-    <div class="flex flex-grow flex-col gap-4 p-4">
-        <h2 class="flex flex-grow items-center justify-center font-bold text-center"><?php echo get_the_title(); ?></h2>
+    <div class="flex flex-grow flex-col gap-4 p-3">
+        <h2 class="flex flex-grow items-center justify-center font-bold text-center"><a class="hover:text-btn-primary line-clamp-2" href="<?php echo esc_url(get_the_permalink()); ?>"><?php echo get_the_title(); ?></a></h2>
         <div class="flex justify-between gap-2">
-            <a href="<?php echo esc_url(get_the_permalink()); ?>" class="flex flex-1 justify-center items-center bg-white border border-btn-primary text-btn-primary px-3 py-2 rounded text-[13px]">
+            <a href="<?php echo esc_url(get_the_permalink()); ?>" class="flex flex-1 justify-center items-center bg-white border border-btn-primary text-btn-primary px-3 py-2 rounded text-[13px] hover:bg-btn-primary hover:text-white transition-all duration-500">
                 <?php echo esc_html__('Xem thực tế', 'ryvances'); ?>
             </a>
             <?php get_template_part('template-components/button-add-to-cart'); ?>
@@ -176,9 +193,4 @@ function hozi_woocommerce_template_loop_product_title() {
     <?php
     echo ob_get_clean();
 }
-
-// remove price
-remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10);
-// remove add to cart
-remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
 ?>
