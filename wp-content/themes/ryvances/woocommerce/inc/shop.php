@@ -167,7 +167,7 @@ add_action('woocommerce_before_shop_loop_item', 'hozi_woocommerce_template_wrapp
 function hozi_woocommerce_template_wrapper_product() {
     ob_start();
     ?>
-    <div class="cart flex flex-col h-full shadow-md rounded-lg overflow-hidden border border-transparent hover:border-btn-primary transition-all duration-300">
+    <div class="cart flex flex-col h-full shadow-md rounded-lg overflow-hidden border border-transparent hover:border-btn-primary transition-all duration-300 bg-[#F5F5F5]">
     <?php
     echo ob_get_clean();
 }
@@ -214,7 +214,7 @@ add_action('woocommerce_shop_loop_item_title', 'hozi_woocommerce_template_loop_p
 function hozi_woocommerce_template_loop_product_title() {
     ob_start();
     ?>
-    <div class="flex flex-grow flex-col gap-4 p-3">
+    <div class="flex flex-grow flex-col gap-4 p-3 bg-[#F5F5F5]">
         <h2 class="flex flex-grow items-center justify-center font-semibold text-center"><a class="hover:text-btn-primary line-clamp-2" href="<?php echo esc_url(get_the_permalink()); ?>"><?php echo get_the_title(); ?></a></h2>
         <div class="flex justify-between gap-2">
             <?php get_template_part('template-components/button-see-reality'); ?>

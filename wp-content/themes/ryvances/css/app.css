@@ -1286,6 +1286,15 @@ video {
   background-color: rgb(0 0 0 / 0.8);
 }
 
+.bg-\[\]{
+  background-color: ;
+}
+
+.bg-\[\#F5F5F5\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity, 1));
+}
+
 .bg-gradient-to-r{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1940,6 +1949,10 @@ body{
 
 .last\:pb-0:last-child{
   padding-bottom: 0px;
+}
+
+.hover\:border:hover{
+  border-width: 1px;
 }
 
 .hover\:border-btn-primary:hover{
