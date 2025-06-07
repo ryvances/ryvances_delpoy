@@ -101,9 +101,42 @@ add_action('woocommerce_after_main_content', 'hozi_woocommerce_pagination', 9);
 function hozi_woocommerce_pagination() {
     ob_start();
     ?>
-    <div class="col-span-12 mt-10">
+    <div class="col-span-12 mt-5">
         <?php woocommerce_pagination(); ?>
     </div>
+    <style>
+        .woocommerce-pagination ul{
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            border: none !important;
+        }
+        .woocommerce-pagination .page-numbers li {
+            border: 1px solid #D9D9D9 !important;
+            border-right: 1px solid #D9D9D9 !important;
+            margin: 0 !important;
+            border-radius: 4px !important;
+        }
+        .woocommerce-pagination .page-numbers li span,
+        .woocommerce-pagination .page-numbers li a{
+            color: #999999 !important;
+            width: 32px;
+            height: 32px;
+        }
+        .woocommerce-pagination .page-numbers li:hover span,
+        .woocommerce-pagination .page-numbers li:hover a {
+            background-color: #5227FF !important;
+            color: #fff !important;
+        }
+        .woocommerce-pagination .page-numbers li:has(span.current),
+        .woocommerce-pagination .page-numbers li:has(a.current),
+        .woocommerce-pagination .page-numbers li:has(span.current) span,
+        .woocommerce-pagination .page-numbers li:has(a.current) a {
+            background-color: #5227FF !important;
+            color: #fff !important;
+        }
+    </style>
     <?php
     echo ob_get_clean();
 }   
@@ -182,11 +215,9 @@ function hozi_woocommerce_template_loop_product_title() {
     ob_start();
     ?>
     <div class="flex flex-grow flex-col gap-4 p-3">
-        <h2 class="flex flex-grow items-center justify-center font-bold text-center"><a class="hover:text-btn-primary line-clamp-2" href="<?php echo esc_url(get_the_permalink()); ?>"><?php echo get_the_title(); ?></a></h2>
+        <h2 class="flex flex-grow items-center justify-center font-semibold text-center"><a class="hover:text-btn-primary line-clamp-2" href="<?php echo esc_url(get_the_permalink()); ?>"><?php echo get_the_title(); ?></a></h2>
         <div class="flex justify-between gap-2">
-            <a href="<?php echo esc_url(get_the_permalink()); ?>" class="flex flex-1 justify-center items-center bg-white border border-btn-primary text-btn-primary px-3 py-2 rounded text-[13px] hover:bg-btn-primary hover:text-white transition-all duration-500">
-                <?php echo esc_html__('Xem thực tế', 'ryvances'); ?>
-            </a>
+            <?php get_template_part('template-components/button-see-reality'); ?>
             <?php get_template_part('template-components/button-add-to-cart'); ?>
         </div>
     </div>
