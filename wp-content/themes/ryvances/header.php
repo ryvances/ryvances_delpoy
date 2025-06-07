@@ -66,11 +66,13 @@
         header.classList.add('h-24');
         header.classList.remove('bg-white');
         header.classList.add('bg-transparent');
+        header.classList.remove('shadow-md');
       } else {
         header.classList.remove('h-24');
         header.classList.add('h-20');
         header.classList.remove('bg-transparent');
         header.classList.add('bg-white');
+        header.classList.add('shadow-md');
       }
     });
   </script>

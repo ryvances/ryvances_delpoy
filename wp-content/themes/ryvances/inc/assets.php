@@ -2,8 +2,8 @@
 // ---------- config tailwind css ----------
 function theme_enqueue_styles()
 {
-  wp_enqueue_style('theme-styles', get_template_directory_uri() . '/css/app.css', array(), '1.0.1');
-  wp_enqueue_script('theme-scripts', get_template_directory_uri() . '/js/app.js', array('jquery'), '1.0.1', true);
+  wp_enqueue_style('theme-styles', get_template_directory_uri() . '/css/app.css', array(), '1.0.2');
+  wp_enqueue_script('theme-scripts', get_template_directory_uri() . '/js/app.js', array('jquery'), '1.0.2', true);
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
