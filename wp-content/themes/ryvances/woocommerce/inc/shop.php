@@ -115,7 +115,7 @@ add_action('woocommerce_before_shop_loop_item', 'hozi_woocommerce_template_wrapp
 function hozi_woocommerce_template_wrapper_product() {
     ob_start();
     ?>
-    <div class="cart shadow-md rounded-lg overflow-hidden border border-transparent hover:border-btn-primary transition-all duration-300">
+    <div class="cart flex flex-col h-full shadow-md rounded-lg overflow-hidden border border-transparent hover:border-btn-primary transition-all duration-300">
     <?php
     echo ob_get_clean();
 }
@@ -164,14 +164,13 @@ add_action('woocommerce_shop_loop_item_title', 'hozi_woocommerce_template_loop_p
 function hozi_woocommerce_template_loop_product_title() {
     ob_start();
     ?>
-    <div class="flex flex-col gap-2 p-2">
-        <h2 class="font-bold text-center"><?php echo get_the_title(); ?></h2>
-        <div class="flex justify-center gap-2">
-            <?php get_template_part('template-components/button-add-to-cart'); ?>
-            <a href="<?php echo esc_url(get_the_permalink()); ?>" class="btn-posnawr">
-                <?php echo esc_html('Xem chi tiết'); ?>
-                <span></span>
+    <div class="flex flex-grow flex-col gap-4 p-4">
+        <h2 class="flex flex-grow items-center justify-center font-bold text-center"><?php echo get_the_title(); ?></h2>
+        <div class="flex justify-between gap-2">
+            <a href="<?php echo esc_url(get_the_permalink()); ?>" class="flex flex-1 justify-center items-center bg-white border border-btn-primary text-btn-primary px-3 py-2 rounded text-[13px]">
+                <?php echo esc_html__('Xem thực tế', 'ryvances'); ?>
             </a>
+            <?php get_template_part('template-components/button-add-to-cart'); ?>
         </div>
     </div>
     <?php
@@ -181,5 +180,5 @@ function hozi_woocommerce_template_loop_product_title() {
 // remove price
 remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10);
 // remove add to cart
-// remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
+remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
 ?>

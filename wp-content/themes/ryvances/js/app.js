@@ -21,15 +21,8 @@ jQuery(document).ready(function($) {
             },
             complete: function() {
                 $button.removeClass('loading');
+                showToastify('Đã thêm vào giỏ hàng', 'success', 3000);
             },
-            success: function(response) {
-                if (response.success) {
-                    // Update cart fragments
-                    $(document.body).trigger('wc_fragment_refresh');
-                    // Show success message
-                    alert(response.data.success_message);
-                }
-            }
         });
     });
 });
