@@ -102,7 +102,7 @@ function hozi_woocommerce_show_product_loop_sale_flash() {
 add_filter('woocommerce_product_loop_start', function($html) {
     $html = str_replace(
         ['<ul class="products', '</ul>'],
-        ['<div class="grid grid-cols-12 gap-5"', '</div>'],
+        ['<div class="grid grid-cols-12 gap-4"', '</div>'],
         $html
     );
     return $html;
@@ -164,16 +164,13 @@ add_action('woocommerce_shop_loop_item_title', 'hozi_woocommerce_template_loop_p
 function hozi_woocommerce_template_loop_product_title() {
     ob_start();
     ?>
-    <div class="flex flex-col gap-2 p-5">
+    <div class="flex flex-col gap-2 p-2">
         <h2 class="font-bold text-center"><?php echo get_the_title(); ?></h2>
-        <div class="flex justify-center gap-4">
+        <div class="flex justify-center gap-2">
+            <?php get_template_part('template-components/button-add-to-cart'); ?>
             <a href="<?php echo esc_url(get_the_permalink()); ?>" class="btn-posnawr">
                 <?php echo esc_html('Xem chi tiết'); ?>
                 <span></span>
-            </a>
-            <a href="<?php echo esc_url(get_the_permalink()); ?>" class="btn-posnawr">
-                <?php echo esc_html('Xem thực tế'); ?>
-                    <span></span>
             </a>
         </div>
     </div>
@@ -184,5 +181,5 @@ function hozi_woocommerce_template_loop_product_title() {
 // remove price
 remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10);
 // remove add to cart
-remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
+// remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
 ?>
