@@ -168,7 +168,7 @@ function hozi_woocommerce_output_related_products()
       }
 
       .related-products-next {
-        left: 40px !important;
+        left: 46px !important;
       }
 
 
@@ -178,13 +178,11 @@ function hozi_woocommerce_output_related_products()
         visibility: hidden;
         background: rgba(0, 0, 0, 0.3);
         color: white;
-        width: 30px;
-        height: 30px;
+        width: 34px;
+        height: 34px;
         border-radius: 50%;
         bottom: 0 !important;
         top: unset !important;
-        transform: translateY(0) scale(0.8);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         pointer-events: none;
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -250,7 +248,7 @@ function hozi_woocommerce_output_related_products()
       }
     }
 
-    @media (max-width: 640px) {
+    /* @media (max-width: 640px) {
 
       .related-products-next,
       .related-products-prev {
@@ -260,7 +258,7 @@ function hozi_woocommerce_output_related_products()
       .related-products-swiper {
         --mask-offset: 1rem;
       }
-    }
+    } */
   </style>
 
   <script>
