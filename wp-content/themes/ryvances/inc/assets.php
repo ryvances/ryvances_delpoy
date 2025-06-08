@@ -9,6 +9,9 @@ function theme_enqueue_styles()
   wp_enqueue_script('custom-toastify', get_template_directory_uri() . '/js/toastify.js', array('toastify'), '1.0.0', true);
   // social media icons
   wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css', array(), '1.0.0');
+  // swiper
+  wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), '1.0.0');
+  wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
