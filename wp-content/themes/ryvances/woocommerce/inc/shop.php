@@ -30,7 +30,7 @@ function hozi_woocommerce_wrapper_start() {
                     <div class="col-span-12 lg:col-span-3">
                         <?php do_action('woocommerce_sidebar_custom'); ?>
                     </div>
-                    <div class="flex flex-col col-span-12 lg:col-span-9 rounded-lg border border-gray-200 shadow-md p-4">
+                    <div class="flex flex-col col-span-12 lg:col-span-9 lg:rounded-lg lg:border lg:border-gray-200 lg:shadow-md p-0 lg:p-4">
             <?php endif; ?>
     <?php
 echo ob_get_clean();
@@ -216,7 +216,7 @@ function hozi_woocommerce_template_loop_product_title() {
     ?>
     <div class="flex flex-grow flex-col gap-4 p-3 bg-[#F5F5F5]">
         <h2 class="flex flex-grow items-center justify-center font-semibold text-center"><a class="hover:text-btn-primary line-clamp-2" href="<?php echo esc_url(get_the_permalink()); ?>"><?php echo get_the_title(); ?></a></h2>
-        <div class="flex justify-between gap-2">
+        <div class="flex flex-col lg:flex-row justify-between gap-2">
             <?php get_template_part('template-components/button-see-reality'); ?>
             <?php get_template_part('template-components/button-add-to-cart'); ?>
         </div>
