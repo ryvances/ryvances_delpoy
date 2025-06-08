@@ -11,8 +11,15 @@ function hozi_woocommerce_output_related_products()
     return;
   }
 
-  // Get related products
-  $related_products = wc_get_related_products($product->get_id(), 8); // Get up to 8 related products
+  // Get related products using WooCommerce function (similar to default)
+  $related_products_ids = wc_get_related_products($product->get_id(), 8);
+  
+  if (empty($related_products_ids)) {
+    return;
+  }
+
+  // Convert IDs to product objects and filter visible products
+  $related_products = array_filter(array_map('wc_get_product', $related_products_ids), 'wc_products_array_filter_visible');
 
   if (empty($related_products)) {
     return;
@@ -27,53 +34,15 @@ function hozi_woocommerce_output_related_products()
       <!-- Swiper -->
       <div class="swiper related-products-slider">
         <div class="swiper-wrapper">
-          <?php foreach ($related_products as $related_product_id) :
-            $related_product = wc_get_product($related_product_id);
-            if (!$related_product || !$related_product->is_visible()) continue;
-            
-            // Set up the global $product for template functions
-            $GLOBALS['product'] = $related_product;
-          ?>
+          <?php foreach ($related_products as $related_product) : ?>
             <div class="swiper-slide">
-              <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden h-full">
-                <div class="product-image relative">
-                  <a href="<?php echo esc_url($related_product->get_permalink()); ?>" class="block">
-                    <?php echo $related_product->get_image('medium', array('class' => 'w-full h-48 object-cover')); ?>
-                    <?php if ($related_product->is_on_sale()) : ?>
-                      <span class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 text-xs rounded">
-                        <?php _e('Sale!', 'woocommerce'); ?>
-                      </span>
-                    <?php endif; ?>
-                  </a>
-                </div>
-                
-                <div class="product-info p-4">
-                  <h3 class="product-title text-lg font-semibold mb-2">
-                    <a href="<?php echo esc_url($related_product->get_permalink()); ?>" class="text-gray-800 hover:text-blue-600 transition-colors">
-                      <?php echo esc_html($related_product->get_name()); ?>
-                    </a>
-                  </h3>
-                  
-                  <div class="product-price mb-3">
-                    <?php echo $related_product->get_price_html(); ?>
-                  </div>
-                  
-                  <?php if ($related_product->get_rating_count()) : ?>
-                    <div class="product-rating mb-3">
-                      <?php echo wc_get_rating_html($related_product->get_average_rating()); ?>
-                      <span class="text-sm text-gray-500 ml-1">
-                        (<?php echo $related_product->get_rating_count(); ?>)
-                      </span>
-                    </div>
-                  <?php endif; ?>
-                  
-                  <div class="product-actions">
-                    <?php
-                    woocommerce_template_loop_add_to_cart();
-                    ?>
-                  </div>
-                </div>
-              </div>
+              <?php
+              $post_object = get_post($related_product->get_id());
+              setup_postdata($GLOBALS['post'] = $post_object);
+              
+              // Use WooCommerce template to render product
+              wc_get_template_part('content', 'product');
+              ?>
             </div>
           <?php endforeach; ?>
         </div>
@@ -103,25 +72,12 @@ function hozi_woocommerce_output_related_products()
       display: flex;
     }
     
-    .related-products-slider .product-card {
+    /* Ensure product cards in swiper have consistent height */
+    .related-products-slider .swiper-slide > div {
+      width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .related-products-slider .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    }
-    
-    .related-products-slider .product-info {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .related-products-slider .product-actions {
-      margin-top: auto;
     }
     
     .related-products-next,
@@ -172,7 +128,7 @@ function hozi_woocommerce_output_related_products()
           delay: 5000,
           disableOnInteraction: false,
         },
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 20,
         breakpoints: {
           640: {
