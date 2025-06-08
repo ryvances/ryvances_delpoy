@@ -188,7 +188,7 @@ add_action('woocommerce_before_shop_loop_item_title', 'hozi_woocommerce_template
 function hozi_woocommerce_template_loop_product_thumbnail() {
     ob_start();
     ?>
-    <div class="group w-full h-[200px] md:h-[360px] lg:h-[300px] bg-gray-200 overflow-hidden rounded-lg cursor-pointer relative">
+    <div class="group w-full h-[300px] md:h-[400px] lg:h-[300px] bg-gray-200 overflow-hidden rounded-lg cursor-pointer relative">
         <img 
             src="https://thietkeweb.dev/wp-content/uploads/2025/06/FireShot-Capture-033-Organic-Food-110211.thietkeweb.dev_-scaled.png"
             alt="<?php echo esc_attr(get_the_title()); ?>"

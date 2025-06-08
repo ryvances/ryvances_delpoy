@@ -937,6 +937,10 @@ video {
   height: 200px;
 }
 
+.h-\[280px\]{
+  height: 280px;
+}
+
 .max-h-0{
   max-height: 0px;
 }
@@ -1836,6 +1840,10 @@ body{
 
   .md\:h-\[360px\]{
     height: 360px;
+  }
+
+  .md\:h-\[340px\]{
+    height: 340px;
   }
 
   .md\:w-1\/2{
