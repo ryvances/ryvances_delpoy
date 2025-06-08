@@ -188,7 +188,7 @@ add_action('woocommerce_before_shop_loop_item_title', 'hozi_woocommerce_template
 function hozi_woocommerce_template_loop_product_thumbnail() {
     ob_start();
     ?>
-    <div class="group w-full h-[300px] md:h-[400px] lg:h-[300px] bg-gray-200 overflow-hidden rounded-lg cursor-pointer relative">
+    <div class="group w-full h-[200px] md:h-[360px] lg:h-[300px] bg-gray-200 overflow-hidden rounded-lg cursor-pointer relative">
         <img 
             src="https://thietkeweb.dev/wp-content/uploads/2025/06/FireShot-Capture-033-Organic-Food-110211.thietkeweb.dev_-scaled.png"
             alt="<?php echo esc_attr(get_the_title()); ?>"
@@ -200,7 +200,7 @@ function hozi_woocommerce_template_loop_product_thumbnail() {
                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                 </svg>
-                <span><?php echo esc_html('Xem chi tiết'); ?></span>
+                <span class="text-sm lg:text-base"><?php echo esc_html('Xem chi tiết'); ?></span>
             </div>
         </a>
     </div>
@@ -214,8 +214,8 @@ add_action('woocommerce_shop_loop_item_title', 'hozi_woocommerce_template_loop_p
 function hozi_woocommerce_template_loop_product_title() {
     ob_start();
     ?>
-    <div class="flex flex-grow flex-col gap-4 p-3 bg-[#F5F5F5]">
-        <h2 class="flex flex-grow items-center justify-center font-semibold text-center"><a class="hover:text-btn-primary line-clamp-2" href="<?php echo esc_url(get_the_permalink()); ?>"><?php echo get_the_title(); ?></a></h2>
+    <div class="flex flex-grow flex-col gap-2 lg:gap-4 p-2 lg:p-3 bg-[#F5F5F5]">
+        <h2 class="flex flex-grow items-center justify-center font-semibold text-center text-sm lg:text-base"><a class="hover:text-btn-primary line-clamp-2" href="<?php echo esc_url(get_the_permalink()); ?>"><?php echo get_the_title(); ?></a></h2>
         <div class="flex flex-col lg:flex-row justify-between gap-2">
             <?php get_template_part('template-components/button-see-reality'); ?>
             <?php get_template_part('template-components/button-add-to-cart'); ?>

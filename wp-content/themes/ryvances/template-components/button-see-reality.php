@@ -1,4 +1,4 @@
-<a href="<?php echo esc_url(get_the_permalink()); ?>" class="holographic-card flex flex-1 justify-center items-center bg-white border border-btn-primary text-btn-primary px-3 py-2 rounded text-[13px] hover:bg-btn-primary hover:text-white transition-all duration-500">
+<a href="<?php echo esc_url(get_the_permalink()); ?>" class="holographic-card text-sm lg:text-base flex flex-1 justify-center items-center bg-white border border-btn-primary text-btn-primary px-3 py-2 rounded hover:bg-btn-primary hover:text-white transition-all duration-500">
   <?php echo esc_html__('Xem thực tế', 'ryvances'); ?>
 </a>
 <style>

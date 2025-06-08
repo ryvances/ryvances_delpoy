@@ -142,7 +142,7 @@ get_header();
       <div class="flex justify-center items-center w-full h-full min-h-[500px]">
         <p class="text-black">Quy Trình Thiết Kế Website</p>
         <h2 class="text-black text-4xl font-bold">Quy Trình Thiết Kế Website WordPress Chuyên Nghiệp Tại HOZI Design</h2>
-        <ul>
+        <!-- <ul>
           <li>
             <a href="#">
               <i class="fab fa-facebook-f icon"></i> </a>
@@ -156,13 +156,8 @@ get_header();
           <li>
             <a href="#"><i class="fab fa-google-plus-g icon"></i></a>
           </li>
-        </ul>
-        <style>
-          margin: 0;
-          padding:0;
-          background: #262626;
-          }
-
+        </ul> -->
+        <!-- <style>
           ul {
             display: flex;
             position: absolute;
@@ -234,7 +229,7 @@ get_header();
           ul li:nth-child(4) a:before {
             background: #dd4b39;
           }
-        </style>
+        </style> -->
       </div>
     </div>
   </section>
