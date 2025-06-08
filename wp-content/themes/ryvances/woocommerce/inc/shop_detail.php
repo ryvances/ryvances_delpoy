@@ -284,7 +284,6 @@ function hozi_woocommerce_output_related_products()
           }
         }
       });
-
       // Enhanced interaction with smoother animations
       const swiperContainer = document.querySelector('.related-products-swiper');
       
