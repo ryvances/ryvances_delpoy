@@ -156,7 +156,7 @@ remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add
 add_filter('woocommerce_product_loop_start', function($html) {
     $html = str_replace(
         ['<ul class="products', '</ul>'],
-        ['<div class="grid grid-cols-12 gap-4"', '</div>'],
+        ['<div class="grid grid-cols-12 gap-3 md:gap-4"', '</div>'],
         $html
     );
     return $html;
@@ -167,7 +167,7 @@ add_action('woocommerce_before_shop_loop_item', 'hozi_woocommerce_template_wrapp
 function hozi_woocommerce_template_wrapper_product() {
     ob_start();
     ?>
-    <div class="cart flex flex-col h-full shadow-md rounded-lg overflow-hidden border border-transparent hover:border-btn-primary transition-all duration-300 bg-[#F5F5F5]">
+    <div class="cart flex flex-col h-full shadow-md rounded-lg overflow-hidden border border-gray-200 hover:border-btn-primary transition-all duration-300 bg-[#F5F5F5]">
     <?php
     echo ob_get_clean();
 }
@@ -188,11 +188,11 @@ add_action('woocommerce_before_shop_loop_item_title', 'hozi_woocommerce_template
 function hozi_woocommerce_template_loop_product_thumbnail() {
     ob_start();
     ?>
-    <div class="group w-full h-[300px] md:h-[400px] lg:h-[300px] bg-gray-200 overflow-hidden rounded-lg cursor-pointer relative">
+    <div class="group w-full h-[240px] md:h-[400px] lg:h-[300px] bg-gray-200 overflow-hidden rounded-lg cursor-pointer relative">
         <img 
             src="https://thietkeweb.dev/wp-content/uploads/2025/06/FireShot-Capture-033-Organic-Food-110211.thietkeweb.dev_-scaled.png"
             alt="<?php echo esc_attr(get_the_title()); ?>"
-            class="w-full h-full !mb-0 object-cover transform translate-y-0 group-hover:-translate-y-[calc(100%-300px)] md:group-hover:-translate-y-[calc(100%-400px)] lg:group-hover:-translate-y-[calc(100%-300px)] transition-transform duration-[2000ms] linear"
+            class="w-full h-full !mb-0 object-cover transform translate-y-0 group-hover:-translate-y-[calc(100%-240px)] md:group-hover:-translate-y-[calc(100%-400px)] lg:group-hover:-translate-y-[calc(100%-300px)] transition-transform duration-[2000ms] linear"
         >
         <a href="<?php echo esc_url(get_the_permalink()); ?>" class="group-hover:bg-black/30 group-hover:opacity-100 opacity-0 absolute top-0 left-0 w-full h-full flex justify-center items-center transition-all duration-300">
             <div class="btn-posnawr flex items-center gap-1 text-white text-sm font-bold">
@@ -214,9 +214,9 @@ add_action('woocommerce_shop_loop_item_title', 'hozi_woocommerce_template_loop_p
 function hozi_woocommerce_template_loop_product_title() {
     ob_start();
     ?>
-    <div class="flex flex-grow flex-col gap-2 lg:gap-4 p-2 lg:p-3 bg-[#F5F5F5]">
-        <h2 class="flex flex-grow items-center justify-center font-semibold text-center text-sm lg:text-base"><a class="hover:text-btn-primary line-clamp-2" href="<?php echo esc_url(get_the_permalink()); ?>"><?php echo get_the_title(); ?></a></h2>
-        <div class="flex flex-col lg:flex-row justify-between gap-2">
+    <div class="flex flex-grow flex-col gap-2 lg:gap-4 p-2 md:p-3 bg-[#F5F5F5]">
+        <h2 class="flex flex-grow items-center justify-center font-semibold text-center text-sm md:text-base"><a class="hover:text-btn-primary line-clamp-2" href="<?php echo esc_url(get_the_permalink()); ?>"><?php echo get_the_title(); ?></a></h2>
+        <div class="flex flex-col md:flex-row justify-between gap-2">
             <?php get_template_part('template-components/button-see-reality'); ?>
             <?php get_template_part('template-components/button-add-to-cart'); ?>
         </div>

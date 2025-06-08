@@ -26,7 +26,10 @@ function hozi_woocommerce_output_related_products()
 ?>
   <section class="related-products-swiper my-8">
     <div class="container mx-auto">
-      <h2 class="text-2xl font-bold mb-6"><?php _e('Sản Phẩm Liên Quan', 'woocommerce'); ?></h2>
+      <h2 class="text-xl md:text-2xl uppercase text-btn-primary font-semibold mb-4 md:mb-6 flex items-center gap-2">
+        <?php _e('Giao diện liên quan', 'woocommerce'); ?>
+        <div class="h-1 w-10 bg-btn-primary"></div>
+      </h2>
 
       <div class="swiper related-products-slider">
         <div class="swiper-wrapper">
@@ -61,6 +64,18 @@ function hozi_woocommerce_output_related_products()
       padding-bottom: 40px;
       position: relative;
       overflow: hidden;
+    }
+
+    @media (max-width: 1024px) {
+      .related-products-slider {
+        padding-bottom: 60px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .related-products-slider {
+        padding-bottom: 50px !important;
+      }
     }
 
     .related-products-slider::before,
@@ -168,7 +183,7 @@ function hozi_woocommerce_output_related_products()
       }
 
       .related-products-next {
-        left: 46px !important;
+        left: 54px !important;
       }
 
 
@@ -178,14 +193,30 @@ function hozi_woocommerce_output_related_products()
         visibility: hidden;
         background: rgba(0, 0, 0, 0.3);
         color: white;
-        width: 34px;
-        height: 34px;
+        width: 46px;
+        height: 46px;
         border-radius: 50%;
         bottom: 0 !important;
         top: unset !important;
         pointer-events: none;
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .related-products-prev {
+        left: 0 !important;
+      }
+
+      .related-products-next {
+        left: 46px !important;
+      }
+
+      .related-products-next,
+      .related-products-prev {
+        width: 38px;
+        height: 38px;
       }
     }
 
