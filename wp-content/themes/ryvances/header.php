@@ -9,7 +9,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <header id="header" class="fixed top-0 left-0 right-0 z-50 h-24 transition-all duration-200">
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 h-24 transition-all duration-200" style="box-shadow: 0 0 15px 2px rgba(33, 33, 33, 0.1);">
     <section class="container px-4 mx-auto h-full flex justify-between items-center">
       <div class="h-full w-full flex justify-between items-center">
         <!-- logo -->
@@ -61,7 +61,7 @@
     document.addEventListener('scroll', function() {
       const header = document.getElementById('header');
       const siteScroll = window.scrollY;
-      if (siteScroll <= 50) {
+      if (siteScroll <= 1) {
         header.classList.remove('h-20');
         header.classList.add('h-24');
         header.classList.remove('bg-white');
