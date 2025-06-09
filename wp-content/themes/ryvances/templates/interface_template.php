@@ -53,17 +53,16 @@ get_header();
           Mẫu giao diện website được chúng tôi thiết kế và thu thập phân chia theo từng ngành nghề phù hợp với nhu cầu thiết kế website của khách hàng. Các mẫu website đều là giao diện mới nhất, giao diện chuẩn trên các thiết bị, chuẩn SEO Google. Khách hàng có thể lựa chọn thiết kế tương tự hoặc giống như website mẫu.
         </p>
         <!-- get template-parts/loop-product-swiper -->
-        <?php get_template_part('template-parts/loop-product-swiper'); ?>
+        <?php get_template_part('template-parts/loop-product-swiper-banner'); ?>
       </div>
     </div>
   </section>
-  <section class="bg-primary">
-    <div class="container px-4 mx-auto h-full">
-      <div class="flex justify-center items-center w-full h-full min-h-[500px]">
-        <p class="text-xl font-bold text-center">Interface Template 2</p>
-      </div>
+  <section class="py-8">
+    <div class="container px-4 mx-auto">
+      <?php get_template_part('template-parts/loop-product-swiper'); ?>
     </div>
   </section>
+
   <section class="bg-primary">
     <div class="container px-4 mx-auto h-full">
       <div class="flex justify-center items-center w-full h-full min-h-[500px]">

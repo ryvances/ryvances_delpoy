@@ -1,6 +1,6 @@
 <?php
 /**
- * hozi Product Swiper Template
+ * Custom Product Swiper Template
  * Usage: get_template_part('template-parts/loop-product-swiper');
  */
 
@@ -22,14 +22,14 @@ $products_query = new WP_Query($args);
 
 if ($products_query->have_posts()) :
 ?>
-<section class="hozi-products-swiper my-8">
+<section class="custom-products-swiper my-8">
     <div class="container mx-auto">
-        <h2 class="text-xl md:text-2xl uppercase text-btn-primary font-semibold mb-4 md:mb-6 flex items-center gap-2">
+        <!-- <h2 class="text-xl md:text-2xl uppercase text-btn-primary font-semibold mb-4 md:mb-6 flex items-center gap-2">
             <?php _e('Sản phẩm nổi bật', 'woocommerce'); ?>
             <div class="h-1 w-10 bg-btn-primary"></div>
-        </h2>
+        </h2> -->
 
-        <div class="swiper hozi-products-slider">
+        <div class="swiper custom-products-slider">
             <div class="swiper-wrapper">
                 <?php while ($products_query->have_posts()) : $products_query->the_post(); 
                     global $post;
@@ -110,22 +110,22 @@ if ($products_query->have_posts()) :
                 <?php endwhile; ?>
             </div>
 
-            <div class="swiper-button-next hozi-products-next"></div>
-            <div class="swiper-button-prev hozi-products-prev"></div>
-            <div class="swiper-pagination hozi-products-pagination mt-6"></div>
+            <div class="swiper-button-next custom-products-next"></div>
+            <div class="swiper-button-prev custom-products-prev"></div>
+            <div class="swiper-pagination custom-products-pagination mt-6"></div>
         </div>
     </div>
 </section>
 
 <style>
-    .hozi-products-swiper {
+    .custom-products-swiper {
         position: relative;
         --mask-offset: 1rem;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         will-change: transform;
     }
 
-    .hozi-products-slider {
+    .custom-products-slider {
         width: 100%;
         padding-bottom: 40px;
         position: relative;
@@ -133,19 +133,19 @@ if ($products_query->have_posts()) :
     }
 
     @media (max-width: 1024px) {
-        .hozi-products-slider {
+        .custom-products-slider {
             padding-bottom: 60px !important;
         }
     }
 
     @media (max-width: 768px) {
-        .hozi-products-slider {
+        .custom-products-slider {
             padding-bottom: 50px !important;
         }
     }
 
-    .hozi-products-slider::before,
-    .hozi-products-slider::after {
+    /* .custom-products-slider::before,
+    .custom-products-slider::after {
         content: '';
         position: absolute;
         top: 0;
@@ -156,11 +156,11 @@ if ($products_query->have_posts()) :
         opacity: 0;
         transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         will-change: opacity;
-    }
+    } */
 
     /* breakpoint > 1024px */
     @media (min-width: 1024px) {
-        .hozi-products-slider::before {
+        .custom-products-slider::before {
             left: 0;
             background: linear-gradient(90deg,
                 rgba(255, 255, 255, 1) 0%,
@@ -168,7 +168,7 @@ if ($products_query->have_posts()) :
                 rgba(255, 255, 255, 0) 100%);
         }
 
-        .hozi-products-slider::after {
+        .custom-products-slider::after {
             right: 0;
             background: linear-gradient(90deg,
                 rgba(255, 255, 255, 0) 0%,
@@ -177,7 +177,7 @@ if ($products_query->have_posts()) :
         }
     }
 
-    .hozi-products-slider .swiper-slide {
+    .custom-products-slider .swiper-slide {
         height: auto;
         display: flex;
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
@@ -185,7 +185,7 @@ if ($products_query->have_posts()) :
         will-change: transform, opacity;
     }
 
-    .hozi-products-slider .swiper-slide>div {
+    .custom-products-slider .swiper-slide>div {
         width: 100%;
         height: 100%;
         display: flex;
@@ -195,34 +195,34 @@ if ($products_query->have_posts()) :
     }
 
     @media (hover: hover) and (pointer: fine) {
-        .hozi-products-swiper:hover .hozi-products-slider::before,
-        .hozi-products-swiper:hover .hozi-products-slider::after {
+        .custom-products-swiper:hover .custom-products-slider::before,
+        .custom-products-swiper:hover .custom-products-slider::after {
             opacity: 1;
         }
     }
 
     @media (hover: none) {
-        .hozi-products-swiper.touch-active .hozi-products-slider::before,
-        .hozi-products-swiper.touch-active .hozi-products-slider::after {
+        .custom-products-swiper.touch-active .custom-products-slider::before,
+        .custom-products-swiper.touch-active .custom-products-slider::after {
             opacity: 1;
         }
 
-        .hozi-products-swiper.touch-active .swiper-slide:first-child,
-        .hozi-products-swiper.touch-active .swiper-slide:last-child {
+        .custom-products-swiper.touch-active .swiper-slide:first-child,
+        .custom-products-swiper.touch-active .swiper-slide:last-child {
             transform: scale(0.98);
             opacity: 0.7;
         }
     }
 
-    .hozi-products-slider.swiper-transitioning .swiper-slide {
+    .custom-products-slider.swiper-transitioning .swiper-slide {
         transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
             opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     /* Navigation buttons */
     @media (min-width: 1024px) {
-        .hozi-products-next,
-        .hozi-products-prev {
+        .custom-products-next,
+        .custom-products-prev {
             opacity: 0;
             visibility: hidden;
             background: rgba(0, 0, 0, 0.3);
@@ -241,16 +241,16 @@ if ($products_query->have_posts()) :
 
     /* breakpoint < 1024px */
     @media (max-width: 1024px) {
-        .hozi-products-prev {
+        .custom-products-prev {
             left: 0 !important;
         }
 
-        .hozi-products-next {
+        .custom-products-next {
             left: 54px !important;
         }
 
-        .hozi-products-next,
-        .hozi-products-prev {
+        .custom-products-next,
+        .custom-products-prev {
             opacity: 0;
             visibility: hidden;
             background: rgba(0, 0, 0, 0.3);
@@ -267,31 +267,31 @@ if ($products_query->have_posts()) :
     }
 
     @media (max-width: 768px) {
-        .hozi-products-prev {
+        .custom-products-prev {
             left: 0 !important;
         }
 
-        .hozi-products-next {
+        .custom-products-next {
             left: 46px !important;
         }
 
-        .hozi-products-next,
-        .hozi-products-prev {
+        .custom-products-next,
+        .custom-products-prev {
             width: 38px;
             height: 38px;
         }
     }
 
-    .hozi-products-next:after,
-    .hozi-products-prev:after {
+    .custom-products-next:after,
+    .custom-products-prev:after {
         font-size: 16px;
         font-weight: bold;
     }
 
     /* breakpoint > 1024px */
     @media (min-width: 1024px) {
-        .hozi-products-swiper:hover .hozi-products-next,
-        .hozi-products-swiper:hover .hozi-products-prev {
+        .custom-products-swiper:hover .custom-products-next,
+        .custom-products-swiper:hover .custom-products-prev {
             opacity: 1;
             visibility: visible;
             pointer-events: auto;
@@ -301,8 +301,8 @@ if ($products_query->have_posts()) :
 
     /* breakpoint < 1024px */
     @media (max-width: 1024px) {
-        .hozi-products-swiper .hozi-products-next,
-        .hozi-products-swiper .hozi-products-prev {
+        .custom-products-swiper .custom-products-next,
+        .custom-products-swiper .custom-products-prev {
             opacity: 1;
             visibility: visible;
             pointer-events: auto;
@@ -311,8 +311,8 @@ if ($products_query->have_posts()) :
     }
 
     @media (min-width: 1024px) {
-        .hozi-products-next:hover,
-        .hozi-products-prev:hover {
+        .custom-products-next:hover,
+        .custom-products-prev:hover {
             background: rgba(0, 0, 0, 0.8);
             color: rgba(255, 255, 255, 1);
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -322,18 +322,18 @@ if ($products_query->have_posts()) :
     }
 
     /* Pagination */
-    .hozi-products-pagination .swiper-pagination-bullet {
+    .custom-products-pagination .swiper-pagination-bullet {
         background: #ccc;
         opacity: 1;
     }
 
-    .hozi-products-pagination .swiper-pagination-bullet-active {
+    .custom-products-pagination .swiper-pagination-bullet-active {
         background: #007cba;
     }
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
-        .hozi-products-swiper {
+        .custom-products-swiper {
             --mask-offset: 1rem;
         }
     }
@@ -354,7 +354,7 @@ if ($products_query->have_posts()) :
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const hoziProductsSwiper = new Swiper('.hozi-products-slider', {
+        const customProductsSwiper = new Swiper('.custom-products-slider', {
             loop: true,
             autoplay: {
                 delay: 5000,
@@ -363,6 +363,10 @@ if ($products_query->have_posts()) :
             speed: 600,
             slidesPerView: 2,
             spaceBetween: 10,
+            grid: {
+                rows: 2,
+                fill: 'row',
+            },
             breakpoints: {
                 640: {
                     slidesPerView: 2,
@@ -382,13 +386,13 @@ if ($products_query->have_posts()) :
                 }
             },
             pagination: {
-                el: '.hozi-products-pagination',
+                el: '.custom-products-pagination',
                 clickable: true,
                 dynamicBullets: true
             },
             navigation: {
-                nextEl: '.hozi-products-next',
-                prevEl: '.hozi-products-prev',
+                nextEl: '.custom-products-next',
+                prevEl: '.custom-products-prev',
             },
             grabCursor: true,
             autoHeight: false,
@@ -411,7 +415,7 @@ if ($products_query->have_posts()) :
             }
         });
 
-        const swiperContainer = document.querySelector('.hozi-products-swiper');
+        const swiperContainer = document.querySelector('.custom-products-swiper');
 
         if (swiperContainer) {
             // mouse events for desktop check breakpoint 1024px
