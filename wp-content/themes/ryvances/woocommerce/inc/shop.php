@@ -56,8 +56,8 @@ function hozi_woocommerce_product_taxonomy_archive_header() {
     ob_start();
     ?>
     <div class="flex items-center gap-2 mb-4">
-        <h1 class="text-2xl font-bold uppercase text-btn-primary"><?php echo get_queried_object()->name; ?></h1>
-        <div class="h-1 w-10 bg-btn-primary"></div>
+        <h1 class="text-2xl font-bold uppercase text-primary"><?php echo get_queried_object()->name; ?></h1>
+        <div class="h-1 w-10 bg-primary"></div>
     </div>
     <p class="text-gray-500 mb-4"><?php echo get_queried_object()->description; ?></p>
     <?php
@@ -167,7 +167,7 @@ add_action('woocommerce_before_shop_loop_item', 'hozi_woocommerce_template_wrapp
 function hozi_woocommerce_template_wrapper_product() {
     ob_start();
     ?>
-    <div class="cart flex flex-col h-full shadow-md rounded-lg overflow-hidden border border-gray-200 hover:border-btn-primary transition-all duration-300 bg-[#F5F5F5]">
+    <div class="cart flex flex-col h-full shadow-md rounded-lg overflow-hidden border border-gray-200 hover:border-primary transition-all duration-300 bg-[#F5F5F5]">
     <?php
     echo ob_get_clean();
 }
@@ -215,7 +215,7 @@ function hozi_woocommerce_template_loop_product_title() {
     ob_start();
     ?>
     <div class="flex flex-grow flex-col gap-2 lg:gap-4 p-2 md:p-3 bg-[#F5F5F5]">
-        <h2 class="flex flex-grow items-center justify-center font-semibold text-center text-sm md:text-base"><a class="hover:text-btn-primary line-clamp-2" href="<?php echo esc_url(get_the_permalink()); ?>"><?php echo get_the_title(); ?></a></h2>
+        <h2 class="flex flex-grow items-center justify-center font-semibold text-center text-sm md:text-base"><a class="hover:text-primary line-clamp-2" href="<?php echo esc_url(get_the_permalink()); ?>"><?php echo get_the_title(); ?></a></h2>
         <div class="flex flex-col md:flex-row justify-between gap-2">
             <?php get_template_part('template-components/button-see-reality'); ?>
             <?php get_template_part('template-components/button-add-to-cart'); ?>

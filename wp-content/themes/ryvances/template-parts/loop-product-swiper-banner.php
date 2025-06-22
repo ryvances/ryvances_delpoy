@@ -25,7 +25,7 @@ if ($products_query->have_posts()) :
 <section class="custom-products-swiper my-8">
     <div class="container mx-auto">
         <!-- <h2 class="text-xl md:text-2xl uppercase text-btn-primary font-semibold mb-4 md:mb-6 flex items-center gap-2">
-            <?php _e('Sản phẩm nổi bật', 'woocommerce'); ?>
+            <?php _e('Giao diện nổi bật', 'woocommerce'); ?>
             <div class="h-1 w-10 bg-btn-primary"></div>
         </h2> -->
 
@@ -110,9 +110,9 @@ if ($products_query->have_posts()) :
                 <?php endwhile; ?>
             </div>
 
-            <div class="swiper-button-next custom-products-next"></div>
+            <!-- <div class="swiper-button-next custom-products-next"></div>
             <div class="swiper-button-prev custom-products-prev"></div>
-            <div class="swiper-pagination custom-products-pagination mt-6"></div>
+            <div class="swiper-pagination custom-products-pagination mt-6"></div> -->
         </div>
     </div>
 </section>

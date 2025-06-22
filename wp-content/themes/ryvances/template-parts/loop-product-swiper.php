@@ -25,7 +25,7 @@ if ($products_query->have_posts()) :
 <section class="hozi-products-swiper my-8">
     <div class="container mx-auto">
         <h2 class="text-xl md:text-2xl uppercase text-btn-primary font-semibold mb-4 md:mb-6 flex items-center gap-2">
-            <?php _e('Sản phẩm nổi bật', 'woocommerce'); ?>
+            <?php _e('Giao diện nổi bật', 'woocommerce'); ?>
             <div class="h-1 w-10 bg-btn-primary"></div>
         </h2>
 
@@ -159,7 +159,7 @@ if ($products_query->have_posts()) :
     }
 
     /* breakpoint > 1024px */
-    @media (min-width: 1024px) {
+    /* @media (min-width: 1024px) {
         .hozi-products-slider::before {
             left: 0;
             background: linear-gradient(90deg,
@@ -175,7 +175,7 @@ if ($products_query->have_posts()) :
                 rgba(255, 255, 255, 0.8) 70%,
                 rgba(255, 255, 255, 1) 100%);
         }
-    }
+    } */
 
     .hozi-products-slider .swiper-slide {
         height: auto;

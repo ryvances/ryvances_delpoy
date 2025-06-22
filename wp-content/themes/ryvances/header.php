@@ -9,13 +9,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <header id="header" class="fixed top-0 left-0 right-0 z-50 h-24 transition-all duration-200" style="box-shadow: 0 0 15px 2px rgba(33, 33, 33, 0.1);">
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 h-24 transition-all duration-200">
     <section class="container px-4 mx-auto h-full flex justify-between items-center">
       <div class="h-full w-full flex justify-between items-center">
         <!-- logo -->
         <a href="/" title="logo Ryvances" class="">
-          <span class="text-3xl font-bold bg-gradient-to-r from-[#7900ff] to-[#381ee5] bg-clip-text text-transparent">HOZI</span>
-          <span class="text-3xl font-bold text-gray-600">Design</span>
+          <span class="text-3xl font-bold bg-gradient-to-r from-[#7900ff] to-[#381ee5] bg-clip-text text-transparent">DR</span>
+          <span class="text-3xl font-bold text-gray-600">Solutions</span>
           <!-- <img src="<?php echo get_template_directory_uri(); ?>/public/logo.png" alt="logo Ryvances" class="w-10 h-10"> -->
         </a>
 
@@ -67,12 +67,14 @@
         header.classList.remove('bg-white');
         header.classList.add('bg-transparent');
         header.classList.remove('shadow-md');
+        header.style.boxShadow = 'none';
       } else {
         header.classList.remove('h-24');
         header.classList.add('h-20');
         header.classList.remove('bg-transparent');
         header.classList.add('bg-white');
         header.classList.add('shadow-md');
+        header.style.boxShadow = '0 0 15px 2px rgba(33, 33, 33, 0.1)';
       }
     });
   </script>

@@ -32,7 +32,7 @@ get_header();
     </div>
   </section>
   <!-- title -->
-  <section class="bg-primary">
+  <section class="secondary">
     <div class="container px-4 mx-auto">
       <div class="flex flex-col justify-center items-center w-full h-full min-h-[200px]">
         <h1 class="text-[40px] font-bold text-center uppercase"><?php the_title(); ?></h1>
@@ -48,7 +48,7 @@ get_header();
   <section class="py-8">
     <div class="container px-4 mx-auto">
       <div class="flex flex-col justify-center items-center w-full">
-        <h2 class="text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-[#F53CE6] to-[#7220CF] text-4xl uppercase mb-4">Hozi Design Việt Nam - Cung cấp mẫu giao diện hiện đại</h2>
+        <h2 class="text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-[#F53CE6] to-[#7220CF] text-4xl uppercase mb-4">DR Solutions - Cung cấp mẫu giao diện hiện đại</h2>
         <p class="text-center text-lg w-[920px]">
           Mẫu giao diện website được chúng tôi thiết kế và thu thập phân chia theo từng ngành nghề phù hợp với nhu cầu thiết kế website của khách hàng. Các mẫu website đều là giao diện mới nhất, giao diện chuẩn trên các thiết bị, chuẩn SEO Google. Khách hàng có thể lựa chọn thiết kế tương tự hoặc giống như website mẫu.
         </p>
@@ -63,7 +63,7 @@ get_header();
     </div>
   </section>
 
-  <section class="bg-primary">
+  <section class="bg-secondary">
     <div class="container px-4 mx-auto h-full">
       <div class="flex justify-center items-center w-full h-full min-h-[500px]">
         <p class="text-xl font-bold text-center">Interface Template 3</p>

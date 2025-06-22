@@ -11,17 +11,17 @@ get_header();
 <!-- <?php get_template_part('template-customs/rank_math_the_breadcrumbs'); ?> -->
 
 <main>
-  <section class="bg-primary h-[785px] md:h-[1000px] relative">
+  <section class="bg-secondary h-[785px] md:h-[1000px] relative">
     <div class="relative z-20 container px-4 mx-auto">
       <div class="pt-44 flex flex-col items-center justify-center h-full gap-y-8">
         <h1 class="text-tx-primary font-bold text-4xl uppercase tracking-widest">Thiết Kế Website WordPress Chuyên Nghiệp</h1>
         <h2 class="text-tx-primary font-semibold text-[28px] flex items-center gap-x-2">
           <span class="text-btn-primary">Phát triển doanh nghiệp </span><?php get_template_part('template-components/typewriter'); ?>
         </h2>
-        <h3 class="text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-[#F53CE6] to-[#7220CF] text-7xl leading-tight">HOZIDesign VIỆT NAM</h3>
+        <h3 class="text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-[#F53CE6] to-[#7220CF] text-7xl leading-tight">DR Solutions</h3>
         <p class="text-tx-primary text-xl text-center">Mang đến những thiết kế <b>độc đáo</b> & <b>chuyên nghiệp</b> giúp doanh nghiệp của bạn <b>nổi bật</b> trong thế giới số.</p>
         <!-- <p class="text-tx-primary text-xl text-center">
-          HOZI Design Việt Nam chuyên <b>thiết kế website WordPress độc đáo</b> và <b>chuyên nghiệp</b>, giúp doanh nghiệp bạn không chỉ <b>nổi bật trong thế giới số</b> mà còn <b>thu hút khách hàng tiềm năng</b> và <b>tăng trưởng doanh thu</b> hiệu quả. Chúng tôi cung cấp <b>giải pháp website WordPress toàn diện</b>, từ <b>thiết kế web chuẩn SEO</b>, <b>responsive</b> (tương thích mọi thiết bị) đến <b>tối ưu tốc độ</b>, mang lại <b>trải nghiệm người dùng vượt trội</b>.
+          DR Solutions chuyên <b>thiết kế website WordPress độc đáo</b> và <b>chuyên nghiệp</b>, giúp doanh nghiệp bạn không chỉ <b>nổi bật trong thế giới số</b> mà còn <b>thu hút khách hàng tiềm năng</b> và <b>tăng trưởng doanh thu</b> hiệu quả. Chúng tôi cung cấp <b>giải pháp website WordPress toàn diện</b>, từ <b>thiết kế web chuẩn SEO</b>, <b>responsive</b> (tương thích mọi thiết bị) đến <b>tối ưu tốc độ</b>, mang lại <b>trải nghiệm người dùng vượt trội</b>.
         </p> -->
         <div class="flex justify-center items-center w-full gap-x-10 mt-10">
           <?php get_template_part('template-components/button-position-aware-hover', null, array('text' => 'Bắt Đầu Dự Án Của Bạn')); ?>
@@ -116,32 +116,32 @@ get_header();
   <section class="">
     <div class="container px-4 mx-auto h-full">
       <div class="flex justify-center items-center w-full h-full min-h-[500px]">
-        <p class="text-black">Giới Thiệu Về HOZI Design (Về Chúng Tôi)</p>
-        <h2 class="text-black text-4xl font-bold">HOZI Design Việt Nam – Đối Tác Thiết Kế Website WordPress Uy Tín Của Bạn</h2>
+        <p class="text-black">Giới Thiệu Về DR Solutions (Về Chúng Tôi)</p>
+        <h2 class="text-black text-4xl font-bold">DR Solutions – Đối Tác Thiết Kế Website WordPress Uy Tín Của Bạn</h2>
       </div>
     </div>
   </section>
-  <section class="bg-primary">
+  <section class="bg-secondary">
     <div class="container px-4 mx-auto h-full">
       <div class="flex justify-center items-center w-full h-full min-h-[500px]">
-        <p class="text-black">Tại Sao Chọn HOZI Design? (Lợi Ích Vượt Trội/USP)</p>
-        <h2 class="text-black text-4xl font-bold">Vì Sao Khách Hàng Tin Tưởng Dịch Vụ Thiết Kế Website WordPress Của HOZI Design?</h2>
+        <p class="text-black">Tại Sao Chọn DR Solutions? (Lợi Ích Vượt Trội/USP)</p>
+        <h2 class="text-black text-4xl font-bold">Vì Sao Khách Hàng Tin Tưởng Dịch Vụ Thiết Kế Website WordPress Của DR Solutions?</h2>
       </div>
     </div>
   </section>
-  <section class="bg-primary">
+  <section class="bg-secondary">
     <div class="container px-4 mx-auto h-full">
       <div class="flex justify-center items-center w-full h-full min-h-[500px]">
         <p class="text-black">Dịch Vụ Của Chúng Tôi (Các gói dịch vụ thiết kế website chính)</p>
-        <h2 class="text-black text-4xl font-bold">Giải Pháp Thiết Kế Website WordPress Toàn Diện Tại HOZI Design</h2>
+        <h2 class="text-black text-4xl font-bold">Giải Pháp Thiết Kế Website WordPress Toàn Diện Tại DR Solutions</h2>
       </div>
     </div>
   </section>
-  <section class="bg-primary">
+  <section class="bg-secondary">
     <div class="container px-4 mx-auto h-full">
       <div class="flex justify-center items-center w-full h-full min-h-[500px]">
         <p class="text-black">Quy Trình Thiết Kế Website</p>
-        <h2 class="text-black text-4xl font-bold">Quy Trình Thiết Kế Website WordPress Chuyên Nghiệp Tại HOZI Design</h2>
+        <h2 class="text-black text-4xl font-bold">Quy Trình Thiết Kế Website WordPress Chuyên Nghiệp Tại DR Solutions</h2>
         <!-- <ul>
           <li>
             <a href="#">

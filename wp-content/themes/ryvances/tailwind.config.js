@@ -13,21 +13,30 @@ module.exports = {
         '2xl': '1450px',
       },
       colors: {
-        primary: '#E0FFFF',
-        secondary: '#2D92B3',
+        primary: '#5227FF',
+        secondary: '#E0FFFF',
+        // secondary: '#2D92B3',
         // secondary: '#4663AC',
 
         'tx-primary': '#333333',
         'tx-secondary': '#666666',
 
-        'btn-primary': '#5227FF',
-        'btn-secondary': '#6D1EA9',
+        // 'btn-primary': '#5227FF',
+        // 'btn-secondary': '#6D1EA9',
 
-        'footer-primary': '#6F00FF',
-        'footer-secondary': '#E1EBEE',
-        'footer-text': '#E0E0E0',
+        // 'footer-primary': '#6F00FF',
+        // 'footer-secondary': '#E1EBEE',
+        // 'footer-text': '#E0E0E0',
 
-        
+        // 'text-primary': '#333333',
+        // 'text-secondary': '#666666',
+        // 'bg-primary': '#F5F5F5',
+
+        // bg-button-primary
+
+        // text-footer-text
+        // bg-footer-background-primary
+
       },
       fontFamily: {
         sans: ['Raleway', 'sans-serif'],

@@ -26,9 +26,9 @@ function hozi_woocommerce_output_related_products()
 ?>
   <section class="related-products-swiper my-8">
     <div class="container mx-auto">
-      <h2 class="text-xl md:text-2xl uppercase text-btn-primary font-semibold mb-4 md:mb-6 flex items-center gap-2">
+      <h2 class="text-xl md:text-2xl uppercase text-primary font-semibold mb-4 md:mb-6 flex items-center gap-2">
         <?php _e('Giao diện liên quan', 'woocommerce'); ?>
-        <div class="h-1 w-10 bg-btn-primary"></div>
+        <div class="h-1 w-10 bg-primary"></div>
       </h2>
 
       <div class="swiper related-products-slider">
